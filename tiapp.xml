@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <deployment-targets>
+        <target device="mobileweb">false</target>
+        <target device="iphone">false</target>
+        <target device="ipad">false</target>
+        <target device="android">true</target>
+        <target device="blackberry">false</target>
+    </deployment-targets>
+<id>com.mysmallcorneroftheweb.BinaryTranslator</id>
+<name>Binary Translator</name>
+<version>1.0</version>
+<publisher>jonny</publisher>
+<url>http://www.mysmallcorneroftheweb.co.uk</url>
+<description>Application for translating text into binary and the reverse.</description>
+<copyright>2011 by Jonny Olliff-Lee</copyright>
+<icon>default_app_logo.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-style>default</statusbar-style>
+    <statusbar-hidden>false</statusbar-hidden>
+    <analytics>true</analytics>
+    <guid>95e43a91-3eff-4bae-8a7e-12a1e93c6189</guid>
+</ti:app>
