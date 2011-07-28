@@ -1,47 +1,28 @@
-// this sets the background color of the master UIView (when there are no windows/tab groups on it)
 Titanium.UI.setBackgroundColor('#000');
 
-// create tab group
 var tabGroup = Titanium.UI.createTabGroup();
 
+Ti.include('translator.js');
 
-//
-// create base UI tab and root window
-//
-var win1 = Titanium.UI.createWindow({  
-    title:'Tab 1',
-    backgroundColor:'#fff'
-});
-var tab1 = Titanium.UI.createTab({  
+var translatorTab = Titanium.UI.createTab({  
     icon:'KS_nav_views.png',
-    title:'Tab 1',
-    window:win1
+    title:'Translator',
+    window:translatorWindow
 });
 
-var label1 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 1',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
-});
+translatorWindow.add(ta1);
 
-win1.add(label1);
-
-//
-// create controls tab and root window
-//
-var win2 = Titanium.UI.createWindow({  
-    title:'Tab 2',
+var dictionaryWindow = Titanium.UI.createWindow({  
+    title:'Dictionary',
     backgroundColor:'#fff'
 });
-var tab2 = Titanium.UI.createTab({  
+var dictionaryTab = Titanium.UI.createTab({  
     icon:'KS_nav_ui.png',
-    title:'Tab 2',
-    window:win2
+    title:'Dictionary',
+    window:dictionaryWindow
 });
 
-var label2 = Titanium.UI.createLabel({
+var dictionaryLabel = Titanium.UI.createLabel({
 	color:'#999',
 	text:'I am Window 2',
 	font:{fontSize:20,fontFamily:'Helvetica Neue'},
@@ -49,16 +30,9 @@ var label2 = Titanium.UI.createLabel({
 	width:'auto'
 });
 
-win2.add(label2);
+dictionaryWindow.add(dictionaryLabel);
 
+tabGroup.addTab(translatorTab);  
+tabGroup.addTab(dictionaryTab);  
 
-
-//
-//  add tabs
-//
-tabGroup.addTab(tab1);  
-tabGroup.addTab(tab2);  
-
-
-// open tab group
 tabGroup.open();
