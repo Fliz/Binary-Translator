@@ -6,15 +6,19 @@ Ti.include('translator/translator_view.js');
 Ti.include('translator/translator_model.js');
 
 binaryTranslate.addEventListener('click', function() {
-	
-	// 4 per rowtranslateToBinary() 	
-	view.height = calculateViewHeightForBinary(textToTranslate.value.length);
-	translationLabel.text = translateToBinary(textToTranslate.value);		
+
+    var input = textToTranslate.value;
+
+	view.height = calculateViewHeightForBinary(input.length);
+	translationLabel.text = translate(input, textDBArray, binaryDBArray);
+	// translationLabel.value = translate(input, textDBArray, binaryDBArray);
 });
 
 hexTranslate.addEventListener('click', function() {
-	
-	// 14 per row
-	view.height = calculateViewHeightForBinary(textToTranslate.value.length);
-	translationLabel.text = translateToHex(textToTranslate.value);
+
+	var input = textToTranslate.value;
+
+	view.height = calculateViewHeightForHex(input.length);	
+	translationLabel.text = translate(input, textDBArray, hexDBArray);
+	// translationLabel.value = translate(input, textDBArray, hexDBArray);
 });
