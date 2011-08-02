@@ -19,7 +19,7 @@ hexTranslate.addEventListener('click', function() {
 
 	var input = textToTranslate.value;
 
-	if (input !== undefined) {
+	if (input != null && input != "") {
 		view.height = calculateViewHeightForHex(input.length);
 		translationLabel.text = translate(input, textDBArray, hexDBArray);
 		// translationLabel.value = translate(input, textDBArray, hexDBArray);

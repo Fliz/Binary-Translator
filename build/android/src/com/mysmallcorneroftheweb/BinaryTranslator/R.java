@@ -14,7 +14,10 @@ public final class R {
         public static final int appicon=0x7f020000;
         public static final int background=0x7f020001;
     }
+    public static final class layout {
+        public static final int titanium_tabgroup=0x7f030000;
+    }
     public static final class style {
-        public static final int Theme_Titanium=0x7f030000;
+        public static final int Theme_Titanium=0x7f040000;
     }
 }

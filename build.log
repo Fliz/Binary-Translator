@@ -1,0 +1,59 @@
+Logfile initialized
+[INFO] logfile = /home/jonny/Dropbox/Programming/Android/Binary Translator/build.log
+[DEBUG] /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/builder.py install Binary Translator /opt/android-sdk-linux_x86 /home/jonny/Dropbox/Programming/Android/Binary Translator com.mysmallcorneroftheweb.BinaryTranslator 1
+[INFO] Titanium SDK version: 1.7.1 (06/21/11 14:28 1293a6d)
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 0.018651 seconds on emulator to get ready
+[DEBUG] com.mysmallcorneroftheweb.BinaryTranslator installed? False
+[INFO] Copying project resources..
+[INFO] Tiapp.xml unchanged, skipping class generation
+[DEBUG] Processing Android resource drawables
+[TRACE] Writing out AndroidManifest.xml
+[DEBUG] adding /home/jonny/Dropbox/Programming/Android/Binary Translator/build/android/gen/com/mysmallcorneroftheweb/BinaryTranslator/R.java to javac build list
+[DEBUG] Building Java Sources: "/home/jonny/Dropbox/Programming/Android/Binary Translator/build/android/gen/com/mysmallcorneroftheweb/BinaryTranslator/R.java"
+[INFO] Compiling Android Resources... This could take some time
+[DEBUG] Android classes.dex built
+[DEBUG] creating unsigned apk: /home/jonny/Dropbox/Programming/Android/Binary Translator/build/android/bin/app-unsigned.apk
+[DEBUG] from resource zip => assets/Resources/translator/translator_controller.js
+[DEBUG] from resource zip => assets/Resources/translator/translator_model.js
+[DEBUG] from resource zip => assets/Resources/translator/translator_view.js
+[DEBUG] from resource zip => assets/Resources/KS_nav_ui.png
+[DEBUG] from resource zip => assets/Resources/KS_nav_views.png
+[DEBUG] from resource zip => assets/Resources/app.js
+[DEBUG] from resource zip => assets/Resources/content.sqlite
+[DEBUG] from resource zip => assets/Resources/default_app_logo.png
+[DEBUG] from resource zip => assets/tiapp.xml
+[DEBUG] from resource zip => res/drawable/appicon.png
+[DEBUG] from resource zip => res/drawable/background.png
+[DEBUG] from resource zip => res/layout/titanium_tabgroup.xml
+[DEBUG] from resource zip => AndroidManifest.xml
+[DEBUG] from resource zip => resources.arsc
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/smalljs.jar => org/mozilla/javascript/resources/Messages.properties
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/smalljs.jar => org/mozilla/javascript/resources/Messages_fr.properties
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/titanium.jar => org/apache/Commons-NOTICE.txt
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/titanium.jar => org/apache/HttpComponents-NOTICE.txt
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/titanium.jar => org/apache/mime4j-NOTICE.txt
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/titanium.jar => org/appcelerator/titanium/build.properties
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/titanium.jar => org/appcelerator/titanium/res/drawable/background.png
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_18.png
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_48.png
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more.png
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_18.png
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_48.png
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_normal.9.png
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_pressed.9.png
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_selected.9.png
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/titanium.jar => org/appcelerator/titanium/res/drawable/default_icon.png
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/titanium.jar => org/appcelerator/titanium/res/drawable/photoDefault.png
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.js
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.min.js
+[DEBUG] from JAR /home/jonny/.titanium/mobilesdk/linux/1.7.1/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/json2.js
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 0.018011 seconds on emulator to get ready
+[INFO] Installing application on emulator
+[INFO] Application installed. Launch from drawer on Home Screen
