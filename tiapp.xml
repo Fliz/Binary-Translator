@@ -9,10 +9,10 @@
     </deployment-targets>
 <id>com.mysmallcorneroftheweb.BinaryTranslator</id>
 <name>Binary Translator</name>
-<version>1.0</version>
+<version>0.2.1</version>
 <publisher>jonny</publisher>
-<url>http://www.mysmallcorneroftheweb.co.uk</url>
-<description>Application for translating text into binary and the reverse.</description>
+<url>http://www.mysmallcornerstudios.com/binary-translator</url>
+<description>Application for translating text into binary or hex and the reverse.</description>
 <copyright>2011 by Jonny Olliff-Lee</copyright>
 <icon>default_app_logo.png</icon>
     <persistent-wifi>false</persistent-wifi>
