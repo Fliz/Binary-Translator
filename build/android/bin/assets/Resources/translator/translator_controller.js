@@ -11,8 +11,7 @@ binaryTranslate.addEventListener('click', function() {
 
 	if (input != null && input != "") {
 		view.height = calculateViewHeightForBinary(input.length);
-		translationLabel.text = translate(input, textDBArray, binaryDBArray);
-		// translationLabel.value = translate(input, textDBArray, binaryDBArray);
+		translationLabel.text = translate(input, textDBArray, binaryDBArray);		
 	}
 });
 hexTranslate.addEventListener('click', function() {
@@ -21,7 +20,6 @@ hexTranslate.addEventListener('click', function() {
 
 	if (input != null && input != "") {
 		view.height = calculateViewHeightForHex(input.length);
-		translationLabel.text = translate(input, textDBArray, hexDBArray);
-		// translationLabel.value = translate(input, textDBArray, hexDBArray);
+		translationLabel.text = translate(input, textDBArray, hexDBArray);		
 	}
 });

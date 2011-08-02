@@ -28,7 +28,7 @@ public class BinaryTranslatorAppInfo implements ITiAppInfo
 	}
 	
 	public String getVersion() {
-		return "0.2.1";
+		return "0.3";
 	}
 	
 	public String getPublisher() {

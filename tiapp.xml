@@ -9,7 +9,7 @@
     </deployment-targets>
 <id>com.mysmallcorneroftheweb.BinaryTranslator</id>
 <name>Binary Translator</name>
-<version>0.2.1</version>
+<version>0.3</version>
 <publisher>jonny</publisher>
 <url>http://www.mysmallcornerstudios.com/binary-translator</url>
 <description>Application for translating text into binary or hex and the reverse.</description>

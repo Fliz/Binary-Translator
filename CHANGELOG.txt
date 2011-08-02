@@ -1,3 +1,13 @@
+Version 0.3
+
+New functionality:
+	- Dictionary functionality added
+
+Issues fixed:
+	- Not translating "."
+
+Known issues:
+	- none
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Version 0.2.1
 

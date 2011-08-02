@@ -2,26 +2,22 @@
  * @author Jonny Olliff-Lee (http://twitter.com/DevJonny)
  */
 
-function loadDBToMemory (colName) {
+var textDBArray = new Array();
+var binaryDBArray = new Array();
+var hexDBArray = new Array();
 
-    var db = Ti.Database.open('content');
-	var dbrows = db.execute('SELECT '+ colName + ' FROM data');
-	db.close();
+var db = Ti.Database.open('content');
+var dbrows = db.execute('SELECT * FROM data');
+db.close();
 
-	var numRows = dbrows.getRowCount();
-	var array = new Array();
+var numRows = dbrows.getRowCount();
 
-	for (var i=0; i < numRows; i++) {
-		array[i] = dbrows.fieldByName(colName);
-		dbrows.next();
-	}
-
-	return array;
+for (var i=0; i < numRows; i++) {
+	textDBArray[i] = dbrows.fieldByName('text');
+	binaryDBArray[i] = dbrows.fieldByName('binary');
+	hexDBArray[i] = dbrows.fieldByName('hex');
+	dbrows.next();
 }
-
-var textDBArray = loadDBToMemory('text');
-var binaryDBArray = loadDBToMemory('binary');
-var hexDBArray = loadDBToMemory('hex');
 
 function translate (input, inputArray, langArray) {
 
@@ -36,7 +32,10 @@ function translate (input, inputArray, langArray) {
 			case ')':
 				index = inputArray.indexOf('")"');
 				break;
-			case 'Â£':
+			case '.':
+				index = inputArray.indexOf('"."');
+				break;
+			case '£':
 				index = inputArray.indexOf('pound');
 				break;
 			default:

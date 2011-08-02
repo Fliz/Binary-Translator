@@ -1,8 +1,8 @@
 #appname:Binary Translator
 #publisher:jonny
-#url:http://www.mysmallcorneroftheweb.co.uk
+#url:http://www.mysmallcornerstudios.com/binary-translator
 #image:appicon.png
 #appid:com.mysmallcorneroftheweb.BinaryTranslator
-#desc:Application for translating text into binary and the reverse.
+#desc:Application for translating text into binary or hex and the reverse.
 #type:mobile
 #guid:95e43a91-3eff-4bae-8a7e-12a1e93c6189

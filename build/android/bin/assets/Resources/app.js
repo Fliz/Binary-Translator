@@ -17,25 +17,13 @@ var translatorTab = Titanium.UI.createTab({
     window:translatorWindow
 });
 
-var dictionaryWindow = Titanium.UI.createWindow({  
-    title:'Dictionary',
-    backgroundColor:'#fff'
-});
+Ti.include('dictionary/dictionary_controller.js');
+
 var dictionaryTab = Titanium.UI.createTab({  
     icon:'KS_nav_ui.png',
     title:'Dictionary',
     window:dictionaryWindow
 });
-
-var dictionaryLabel = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 2',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
-});
-
-dictionaryWindow.add(dictionaryLabel);
 
 tabGroup.addTab(translatorTab);  
 tabGroup.addTab(dictionaryTab);  
