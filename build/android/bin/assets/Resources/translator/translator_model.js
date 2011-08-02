@@ -4,7 +4,7 @@
 
 function loadDBToMemory (colName) {
 
-	var db = Ti.Database.open('content');
+    var db = Ti.Database.open('content');
 	var dbrows = db.execute('SELECT '+ colName + ' FROM data');
 	db.close();
 
@@ -14,7 +14,7 @@ function loadDBToMemory (colName) {
 	for (var i=0; i < numRows; i++) {
 		array[i] = dbrows.fieldByName(colName);
 		dbrows.next();
-	};
+	}
 
 	return array;
 }
@@ -23,28 +23,49 @@ var textDBArray = loadDBToMemory('text');
 var binaryDBArray = loadDBToMemory('binary');
 var hexDBArray = loadDBToMemory('hex');
 
-function translateToBinary (input) {
-	
+function translate (input, inputArray, langArray) {
+
 	var output = '';
-	
-	for (var c = 0; c < input.length; c++) {
-		
-		if(input[c] == '(' || input[c] == ')') {
-			input[c] = '"' + input[c] + '"';
+
+	for (var t = 0; t < input.length; t++) {
+
+		switch (input[t]) {
+			case '(':
+				index = inputArray.indexOf('"("');
+				break;
+			case ')':
+				index = inputArray.indexOf('")"');
+				break;
+			case 'Â£':
+				index = inputArray.indexOf('pound');
+				break;
+			default:
+				index = inputArray.indexOf(input[t]);
+				break;
 		}
-		
-		index = textDBArray.indexOf(input[c]);
-		
+
 		if (index < 0) {
-			index = textDBArray.indexOf('"'+input[c]+'"');
+			output += input[t];
+		} else {
+			output += langArray[index] + ' ';
 		}
-		
-		output += binaryDBArray[index] + ' ';		
 	}
-	
+
 	return output;
 }
 
-function calculateViewHeight (numOfChars) {
-	return 40 * ((numOfChars - (numOfChars % 4)) / 4);
+function calculateViewHeightForBinary (numOfChars) {
+	if (numOfChars < 4) {
+		return 16;
+	} else {
+		return 16 * ((numOfChars - (numOfChars % 4)) / 4);
+	}
+}
+
+function calculateViewHeightForHex (numOfChars) {
+	if (numOfChars < 15) {
+		return 18
+	} else {
+		return 18 * ((numOfChars - (numOfChars % 15)) / 15);
+	}
 }

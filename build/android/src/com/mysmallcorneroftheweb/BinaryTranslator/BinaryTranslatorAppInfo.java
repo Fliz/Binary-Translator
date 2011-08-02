@@ -28,7 +28,7 @@ public class BinaryTranslatorAppInfo implements ITiAppInfo
 	}
 	
 	public String getVersion() {
-		return "1.0";
+		return "0.2.1";
 	}
 	
 	public String getPublisher() {
@@ -36,7 +36,7 @@ public class BinaryTranslatorAppInfo implements ITiAppInfo
 	}
 	
 	public String getUrl() {
-		return "http://www.mysmallcorneroftheweb.co.uk";
+		return "http://www.mysmallcornerstudios.com/binary-translator";
 	}
 	
 	public String getCopyright() {
@@ -44,7 +44,7 @@ public class BinaryTranslatorAppInfo implements ITiAppInfo
 	}
 	
 	public String getDescription() {
-		return "Application for translating text into binary and the reverse.";
+		return "Application for translating text into binary or hex and the reverse.";
 	}
 	
 	public String getIcon() {

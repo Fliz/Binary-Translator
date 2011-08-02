@@ -1,0 +1,23 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Version 0.2
+
+New functionality:
+    - Translate to text to hex
+
+Issues fixed:
+    - None
+
+Known issues:
+    - App doesn't work if translating on nothing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Version 0.1
+
+New functionality: 
+    - Translate to text to binary
+
+Issues fixed:
+    - None
+
+Known issues:
+    - App doesn't work if translating on nothing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
