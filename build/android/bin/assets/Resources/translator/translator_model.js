@@ -14,7 +14,7 @@ function loadDBToMemory (colName) {
 	for (var i=0; i < numRows; i++) {
 		array[i] = dbrows.fieldByName(colName);
 		dbrows.next();
-	}
+	};
 
 	return array;
 }
@@ -23,49 +23,28 @@ var textDBArray = loadDBToMemory('text');
 var binaryDBArray = loadDBToMemory('binary');
 var hexDBArray = loadDBToMemory('hex');
 
-function translate (input, inputArray, langArray) {
-
+function translateToBinary (input) {
+	
 	var output = '';
-
-	for (var t = 0; t < input.length; t++) {
-
-		switch (input[t]) {
-			case '(':
-				index = inputArray.indexOf('"("');
-				break;
-			case ')':
-				index = inputArray.indexOf('")"');
-				break;
-			case '£':
-				index = inputArray.indexOf('pound');
-				break;
-			default:
-				index = inputArray.indexOf(input[t]);
-				break;
+	
+	for (var c = 0; c < input.length; c++) {
+		
+		if(input[c] == '(' || input[c] == ')') {
+			input[c] = '"' + input[c] + '"';
 		}
-
+		
+		index = textDBArray.indexOf(input[c]);
+		
 		if (index < 0) {
-			output += input[t];
-		} else {
-			output += langArray[index] + ' ';
+			index = textDBArray.indexOf('"'+input[c]+'"');
 		}
+		
+		output += binaryDBArray[index] + ' ';		
 	}
-
+	
 	return output;
 }
 
-function calculateViewHeightForBinary (numOfChars) {
-	if (numOfChars < 4) {
-		return 16;
-	} else {
-		return 16 * ((numOfChars - (numOfChars % 4)) / 4);
-	}
-}
-
-function calculateViewHeightForHex (numOfChars) {
-	if (numOfChars < 15) {
-		return 18
-	} else {
-		return 18 * ((numOfChars - (numOfChars % 15)) / 15);
-	}
+function calculateViewHeight (numOfChars) {
+	return 40 * ((numOfChars - (numOfChars % 4)) / 4);
 }

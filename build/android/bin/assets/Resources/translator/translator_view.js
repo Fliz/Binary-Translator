@@ -18,7 +18,8 @@ var bottomButtonsTop = 380;
 var binaryTranslateLeft = 5;
 var hexTranslateLeft = 160;
 var scrollViewLeft = 20;
-var shareLeft = 100;
+var copyToClipboardLeft = 25;
+var shareLeft = 175;
 
 // Heights
 var textToTranslateHeight = 105;
@@ -100,13 +101,16 @@ var translationLabel = Ti.UI.createLabel({
 	textAlign: 'center'
 });
 
-// var translationLabel = Ti.UI.createTextArea({	
-	// value: '',	
-	// editable: false
-// });
-
 view.add(translationLabel);
 scrollView.add(view);
+
+var copyToClipboard = Ti.UI.createButton({
+	title: 'Copy to clipboard',
+	font: {fontSize: buttonFontSize},
+	width: bottomButtonsWidth,
+	top: bottomButtonsTop,
+	left: copyToClipboardLeft
+});
 
 var share = Ti.UI.createButton({
 	title: 'Share translation',
@@ -121,4 +125,5 @@ translatorWindow.add(textToTranslate);
 translatorWindow.add(binaryTranslate);
 translatorWindow.add(hexTranslate);
 translatorWindow.add(scrollView);
+translatorWindow.add(copyToClipboard);
 translatorWindow.add(share);

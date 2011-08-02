@@ -3,7 +3,7 @@
  */
 
 var translatorWindow = Ti.UI.createWindow({
-	title: 'Translator',
+    title: 'Translator',
 	backgroundColor: 'black'
 });
 

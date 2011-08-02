@@ -4,7 +4,7 @@
 
 function loadDBToMemory (colName) {
 
-	var db = Ti.Database.open('content');
+    var db = Ti.Database.open('content');
 	var dbrows = db.execute('SELECT '+ colName + ' FROM data');
 	db.close();
 
@@ -36,7 +36,7 @@ function translate (input, inputArray, langArray) {
 			case ')':
 				index = inputArray.indexOf('")"');
 				break;
-			case '£':
+			case 'Â£':
 				index = inputArray.indexOf('pound');
 				break;
 			default:

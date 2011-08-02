@@ -7,7 +7,7 @@ Ti.include('translator/translator_model.js');
 
 binaryTranslate.addEventListener('click', function() {
 
-	var input = textToTranslate.value;
+    var input = textToTranslate.value;
 
 	view.height = calculateViewHeightForBinary(input.length);
 	translationLabel.text = translate(input, textDBArray, binaryDBArray);
@@ -18,7 +18,9 @@ hexTranslate.addEventListener('click', function() {
 
 	var input = textToTranslate.value;
 
-	view.height = calculateViewHeightForHex(input.length);	
-	translationLabel.text = translate(input, textDBArray, hexDBArray);
-	// translationLabel.value = translate(input, textDBArray, hexDBArray);
+    if (input !== undefined) {
+    	view.height = calculateViewHeightForHex(input.length);
+    	translationLabel.text = translate(input, textDBArray, hexDBArray);
+    	// translationLabel.value = translate(input, textDBArray, hexDBArray);
+    }
 });
