@@ -7,6 +7,6 @@ var dictionaryWindow = Ti.UI.createWindow({
 	backgroundColor: 'black'
 });
 
-var dictionaryView = Ti.UI.createTableView({});
+var dictionaryView = Ti.UI.createTableView();
 
 dictionaryWindow.add(dictionaryView);

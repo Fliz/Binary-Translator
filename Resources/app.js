@@ -9,7 +9,7 @@ Titanium.UI.setBackgroundColor('#000');
 
 var tabGroup = Titanium.UI.createTabGroup();
 
-Ti.include('translator/translator_controller.js');
+Ti.include('/translator/translator_controller.js');
 
 var translatorTab = Titanium.UI.createTab({  
     icon:'KS_nav_views.png',
@@ -17,7 +17,7 @@ var translatorTab = Titanium.UI.createTab({
     window:translatorWindow
 });
 
-Ti.include('dictionary/dictionary_controller.js');
+Ti.include('/dictionary/dictionary_controller.js');
 
 var dictionaryTab = Titanium.UI.createTab({  
     icon:'KS_nav_ui.png',

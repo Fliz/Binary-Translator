@@ -2,8 +2,8 @@
  * @author Jonny Olliff-Lee (http://twitter.com/DevJonny)
  */
 
-Ti.include('translator/translator_view.js');
-Ti.include('translator/translator_model.js');
+Ti.include('/translator/translator_view.js');
+Ti.include('/translator/translator_model.js');
 
 binaryTranslate.addEventListener('click', function() {
 

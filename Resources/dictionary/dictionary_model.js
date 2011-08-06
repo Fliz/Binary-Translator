@@ -2,6 +2,75 @@
  * @author Jonny Olliff-Lee (http://twitter.com/DevJonny)
  */
 
+function getTextElements() {
+
+	var db = Ti.Database.open('content');
+	var dbrows = db.execute('SELECT text FROM data');
+	db.close();
+
+	var numRows = dbrows.getRowCount();
+
+	for (var i=0; i < numRows; i++) {
+		textDBArray[i] = dbrows.fieldByName('text');
+		dbrows.next();
+	}
+
+	var data = new Array();
+
+	for (var r=0; r < textDBArray.length; r++) {
+		
+		switch (textDBArray[r]) {
+			case '"("':
+				textDBArray[r] = '(';
+				break;
+			case '")"':
+				textDBArray[r] = ')';
+				break;
+			case '"."':
+				textDBArray[r] = '.';
+				break;
+			case 'pound':
+				textDBArray[r] = '£';
+				break;
+			case ' ':
+				textDBArray[r] = 'space';
+				break;
+		}
+		
+		data[r] = {
+			title: textDBArray[r]
+		}
+	}
+
+	return data;
+}
+
+function getTranslation (character) {
+
+	switch (character) {
+			case '(':
+				character = '"("';
+				break;
+			case ')':
+				character = '")"';
+				break;
+			case '.':
+				character = '"."';
+				break;
+			case '£':
+				character = 'pound';
+				break;
+			default:				
+				break;
+		}
+
+	var db = Ti.Database.open('content');
+	var dbrows = db.execute('SELECT binary, hex FROM data WHERE text = "' + character + '"');
+	db.close();
+	
+	return "Binary:\t" + dbrows.fieldByName('binary') + "\nHex:\t" + dbrows.fieldByName('hex');
+}
+
 function getDictionaryData () {
 
 	var db = Ti.Database.open('content');
