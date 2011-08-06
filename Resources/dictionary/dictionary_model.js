@@ -65,10 +65,13 @@ function getTranslation (character) {
 		}
 
 	var db = Ti.Database.open('content');
-	var dbrows = db.execute('SELECT binary, hex FROM data WHERE text = "' + character + '"');
+	var dbrows = db.execute('SELECT binary, hex, decimal, html FROM data WHERE text = "' + character + '"');
 	db.close();
 	
-	return "Binary:\t" + dbrows.fieldByName('binary') + "\nHex:\t" + dbrows.fieldByName('hex');
+	return "Binary:   " + dbrows.fieldByName('binary') 
+				+ "\nHex:   " + dbrows.fieldByName('hex') 
+				+ "\nDecimal:   " + dbrows.fieldByName('decimal')
+				+ "\nHTML:   " + dbrows.fieldByName('html');
 }
 
 function getDictionaryData () {

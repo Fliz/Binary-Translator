@@ -14,6 +14,7 @@ binaryTranslate.addEventListener('click', function() {
 		translationLabel.text = translate(input, textDBArray, binaryDBArray);		
 	}
 });
+
 hexTranslate.addEventListener('click', function() {
 
 	var input = textToTranslate.value;
@@ -22,4 +23,8 @@ hexTranslate.addEventListener('click', function() {
 		view.height = calculateViewHeightForHex(input.length);
 		translationLabel.text = translate(input, textDBArray, hexDBArray);		
 	}
+});
+
+copy.addEventListener('click', function() {
+	Ti.UI.Clipboard.setText(translationLabel.text);
 });

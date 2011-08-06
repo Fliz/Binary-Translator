@@ -1,58 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.mysmallcorneroftheweb.BinaryTranslator"
-      android:versionCode="1"
-      android:versionName="1"
->
-	<uses-sdk android:minSdkVersion="4" />
-	
-	<supports-screens android:smallScreens="false"
-                android:normalScreens="true"
-                android:largeScreens="true"
-                android:anyDensity="false"
-    />
-    
-	<application
-    	android:icon="@drawable/appicon"
-      	android:label="Binary Translator"
-      	android:name="BinaryTranslatorApplication"
-      	android:debuggable="false"
-	>
-    	<activity
-        	android:name=".BinaryTranslatorActivity"
-            android:label="Binary Translator"
-			android:theme="@style/Theme.Titanium"
-            android:configChanges="keyboardHidden|orientation"
-        >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+<?xml version="1.0" ?><manifest android:versionCode="1" android:versionName="1" package="com.mysmallcornerstudios.binarytranslator" xmlns:android="http://schemas.android.com/apk/res/android">
+	<supports-screens android:anyDensity="false"/><uses-sdk android:minSdkVersion="7"/>
+
+	<!-- TI_MANIFEST -->
+
+	<application android:debuggable="false" android:icon="@drawable/appicon" android:label="Binary Translator" android:name="BinaryTranslatorApplication">
+
+		<!-- TI_APPLICATION -->
+
+		<activity android:configChanges="keyboardHidden|orientation" android:label="Binary Translator" android:name=".BinaryTranslatorActivity" android:theme="@style/Theme.Titanium">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
 
 		
-		<activity
-        	android:name="org.appcelerator.titanium.TiActivity"
-        	android:configChanges="keyboardHidden|orientation"
-      	/>
-		<activity android:name="ti.modules.titanium.ui.TiTabActivity"
-			android:configChanges="keyboardHidden|orientation"
-		/>
-		<activity android:name="ti.modules.titanium.media.TiVideoActivity"
-			android:configChanges="keyboardHidden|orientation"
-			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-		/>
 
-		<service
-			android:name="org.appcelerator.titanium.analytics.TiAnalyticsService"
-			android:exported="false"
-		/>
+		<activity android:configChanges="keyboardHidden|orientation" android:name="org.appcelerator.titanium.TiActivity"/>
+		<activity android:configChanges="keyboardHidden|orientation" android:name="org.appcelerator.titanium.TiTranslucentActivity" android:theme="@android:style/Theme.Translucent"/>
+		<activity android:configChanges="keyboardHidden|orientation" android:name="org.appcelerator.titanium.TiModalActivity" android:theme="@android:style/Theme.Translucent"/>
+		<activity android:configChanges="keyboardHidden|orientation" android:name="ti.modules.titanium.ui.TiTabActivity"/>
+		<activity android:name="ti.modules.titanium.ui.android.TiPreferencesActivity"/>
+
+		<service android:exported="false" android:name="org.appcelerator.titanium.analytics.TiAnalyticsService"/>
+		
+
 	</application>
-	
-	<uses-permission android:name="android.permission.INTERNET"/>
+
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
 	
-	
+
 </manifest>

@@ -1,8 +1,8 @@
 #appname:Binary Translator
-#publisher:jonny
-#url:http://www.mysmallcornerstudios.com/binary-translator
+#publisher:Jonny Olliff-Lee (@DevJonny)
+#url:http://www.mysmallcornerstudios.com/binary-studios
 #image:appicon.png
-#appid:com.mysmallcorneroftheweb.BinaryTranslator
-#desc:Application for translating text into binary or hex and the reverse.
+#appid:com.mysmallcornerstudios.binarytranslator
+#desc:Android app for translating text in to binary or hex and vice versa. As a look up tool for characters, binary, and hex.
 #type:mobile
 #guid:95e43a91-3eff-4bae-8a7e-12a1e93c6189

@@ -7,6 +7,11 @@ var dictionaryWindow = Ti.UI.createWindow({
 	backgroundColor: 'black'
 });
 
-var dictionaryView = Ti.UI.createTableView();
+var search = Ti.UI.createSearchBar();
+
+var dictionaryView = Ti.UI.createTableView({
+	search: search,
+	filterAttribute: 'title'	
+});
 
 dictionaryWindow.add(dictionaryView);
